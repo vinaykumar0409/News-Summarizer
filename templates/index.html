@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Summarizer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Article Summarizer</h1>
+        <form method="POST" class="mb-4" action="/index">
+            <div class="form-group">
+                <label for="topic">Enter Topic:</label>
+                <input type="text" class="form-control" id="topic" name="topic" placeholder="e.g., climate change" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Articles</button>
+        </form>
+
+        {% if summaries %}
+            <h2>Summaries for "{{ topic }}"</h2>
+            <ul class="list-group">
+                {% for summary in summaries %}
+                    <li class="list-group-item">
+                        <h5>{{ summary.title }}</h5>
+                        <p><strong>Summary:</strong> {{ summary.summary }}</p>
+                        <a href="{{ summary.url }}" target="_blank" class="btn btn-link">Read Full Article</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

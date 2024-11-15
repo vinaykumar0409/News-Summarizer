@@ -1,0 +1,32 @@
+body {
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.container {
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the container */
+}
+
+h1 {
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.list-group-item {
+    border: none; /* Remove border for list items */
+    padding: 15px; /* Increased padding for list items */
+}
+
+.list-group-item h5 {
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.btn-link {
+    color: #007bff; /* Bootstrap primary color for links */
+}
+
+.btn-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
